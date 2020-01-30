@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_is_suspended</h1>
+<h2 class="subtitle">Checks whether a sound is suspended</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_is_suspended(soundName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> true if sound is suspended, false if not</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Checks whether a sound is suspended. Returns true if suspended, false if not.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Check if sound "fx_jump" is suspended and if yes, restore all suspended sounds
+if (ex_audio_is_suspended("fx_jump")) {
+    ex_audio_restore_all();
+}
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.0</small> <script>prettyPrint();</script>

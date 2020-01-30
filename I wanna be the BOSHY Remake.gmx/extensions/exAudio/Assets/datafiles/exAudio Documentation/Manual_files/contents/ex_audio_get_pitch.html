@@ -1,0 +1,37 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_get_pitch</h1>
+<h2 class="subtitle">Gets the pitch of a sound</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_get_pitch(soundName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the pitch amount, 0 to 5</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Gets the pitch of a sound.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Get the pitch for sound "fx_jump" and store it in variable _value
+_value = ex_audio_get_pitch("fx_jump");
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.0</small> <script>prettyPrint();</script>

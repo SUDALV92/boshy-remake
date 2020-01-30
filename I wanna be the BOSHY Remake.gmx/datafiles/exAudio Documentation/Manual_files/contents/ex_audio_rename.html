@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_audio_rename</h1>
+<h2 class="subtitle">Changes the sound's name</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_rename(soundName, newName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The original sound name</td>
+		</tr>
+		<tr>
+			<td>newName</td>
+			<td>The new name, must be unique</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> 1 on success</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Changes the sound's name string. The new sound name must be unique otherwise the function will fail.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Rename the sound "fx_jump" to "fx_enemy_jump"
+ex_audio_rename("fx_jump", "fx_enemy_jump");
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.8.0</small> <script>prettyPrint();</script>

@@ -1,0 +1,37 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_class_clear</h1>
+<h2 class="subtitle">Clears an audio class from all sounds</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_class_clear(audioClassName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>audioClassName</td>
+			<td>The class name</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> true if cleared</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Clears an audio class of any sounds. Note that this doesn't actually destroy the audio class. You need to use ex_audio_class_destroy() for that.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//clear audio class "sound_effects"
+ex_audio_class_clear("sound_effects");
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.4</small> <script>prettyPrint();</script>

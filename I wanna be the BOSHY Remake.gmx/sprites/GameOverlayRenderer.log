@@ -1,0 +1,32 @@
+Sun Nov 15 18:42:32 2015 UTC - Module file name: C:\Program Files (x86)\Steam\gameoverlayrenderer.dll
+Sun Nov 15 18:42:32 2015 UTC - GameID = 214850
+Sun Nov 15 18:42:32 2015 UTC - System page size: 4096
+Sun Nov 15 18:42:32 2015 UTC - Failed loading shell32.dll, not hooking ShellExecute calls
+Sun Nov 15 18:42:32 2015 UTC - Hooking SetCursorPos, GetCursorPos, ShowCursor, and SetCursor
+Sun Nov 15 18:42:32 2015 UTC - Modules at GameOverlayRenderer.dll attach
+Sun Nov 15 18:42:32 2015 UTC - 01: makensis.exe - (0X00400000 to 0X00480000)
+Sun Nov 15 18:42:32 2015 UTC - 02: ntdll.dll - (0X774E0000 to 0X77659000)
+Sun Nov 15 18:42:32 2015 UTC - 03: KERNEL32.DLL - (0X747F0000 to 0X748E0000)
+Sun Nov 15 18:42:32 2015 UTC - 04: KERNELBASE.dll - (0X764F0000 to 0X76666000)
+Sun Nov 15 18:42:32 2015 UTC - 05: GDI32.dll - (0X76080000 to 0X761CD000)
+Sun Nov 15 18:42:32 2015 UTC - 06: USER32.dll - (0X74660000 to 0X747A0000)
+Sun Nov 15 18:42:32 2015 UTC - 07: VERSION.dll - (0X74470000 to 0X74478000)
+Sun Nov 15 18:42:32 2015 UTC - 08: msvcrt.dll - (0X76430000 to 0X764EE000)
+Sun Nov 15 18:42:32 2015 UTC - 09: IMM32.DLL - (0X76B70000 to 0X76B9B000)
+Sun Nov 15 18:42:32 2015 UTC - 10: MSCTF.dll - (0X76C30000 to 0X76D50000)
+Sun Nov 15 18:42:32 2015 UTC - 11: gameoverlayrenderer.dll - (0X5BA50000 to 0X5BBA4000)
+Sun Nov 15 18:42:32 2015 UTC - 12: ADVAPI32.dll - (0X75F10000 to 0X75F8B000)
+Sun Nov 15 18:42:32 2015 UTC - 13: sechost.dll - (0X75FA0000 to 0X75FE3000)
+Sun Nov 15 18:42:32 2015 UTC - 14: RPCRT4.dll - (0X761D0000 to 0X7627C000)
+Sun Nov 15 18:42:32 2015 UTC - 15: WINMM.dll - (0X710A0000 to 0X710C4000)
+Sun Nov 15 18:42:32 2015 UTC - 16: SspiCli.dll - (0X745F0000 to 0X7460E000)
+Sun Nov 15 18:42:32 2015 UTC - 17: CRYPTBASE.dll - (0X745E0000 to 0X745EA000)
+Sun Nov 15 18:42:32 2015 UTC - 18: bcryptPrimitives.dll - (0X74580000 to 0X745D9000)
+Sun Nov 15 18:42:32 2015 UTC - 19: ole32.dll - (0X76DC0000 to 0X76EAA000)
+Sun Nov 15 18:42:32 2015 UTC - 20: WINMMBASE.dll - (0X71070000 to 0X71093000)
+Sun Nov 15 18:42:32 2015 UTC - 21: combase.dll - (0X77100000 to 0X772BA000)
+Sun Nov 15 18:42:32 2015 UTC - 22: cfgmgr32.dll - (0X76040000 to 0X76076000)
+Sun Nov 15 18:42:32 2015 UTC - 23: DEVOBJ.dll - (0X71020000 to 0X71041000)
+Sun Nov 15 18:42:32 2015 UTC - 24: psapi.dll - (0X763C0000 to 0X763C6000)
+Sun Nov 15 18:42:32 2015 UTC - ----------------------------
+Sun Nov 15 18:42:35 2015 UTC - GameOverlayRenderer.dll detaching

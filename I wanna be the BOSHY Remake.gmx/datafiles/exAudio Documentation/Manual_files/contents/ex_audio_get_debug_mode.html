@@ -1,0 +1,24 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_get_debug_mode</h1>
+<h2 class="subtitle">Gets whether exAudio debug messages are enabled or not</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_get_debug_mode()
+</code>
+
+<small class="returns"><strong>Returns</strong> whether exAudio debug messages are enabled = true or not = false</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Gets whether exAudio debug messages are enabled or not.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Gets whether exAudio debug messages are enabled
+if (ex_audio_get_debug_mode() == true) {
+    draw_text(x, y, "exAudio debug mode is ON");
+}
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.8.0</small> <script>prettyPrint();</script>

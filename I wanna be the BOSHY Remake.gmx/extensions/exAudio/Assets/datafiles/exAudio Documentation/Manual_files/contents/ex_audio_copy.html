@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_audio_copy</h1>
+<h2 class="subtitle">Creates a copy of an existing sound</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_copy(soundName, copyName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The original sound name</td>
+		</tr>
+		<tr>
+			<td>copyName</td>
+			<td>The new sound name, must be unique</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the ID of the new copied sound in exAudio sound database</small>
+
+<h3 class="section">Description</h3>
+<p class="description"> There are some times that you need to have a different instance of the same audio resource but you need it to have the exact same settings of an existing sound and classes. This can save you having to manually change a sound's properties and re-add it to any classes. The new sound name must be unique otherwise the function will fail.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Copy the sound "fx_jump" and create new sound "fx_jump2" with the same settings
+ex_audio_copy("fx_jump", "fx_jump2");
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.8.0</small> <script>prettyPrint();</script>

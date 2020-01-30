@@ -1,0 +1,37 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_group_get_load_progress</h1>
+<h2 class="subtitle">Returns the Audio Group loaded progress</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_group_get_load_progress(audioGroup)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>audioGroup</td>
+			<td>The audio group to check</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the loaded percent from 0 to 100</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Returns the Audio Group progress. As Audio Groups are loading async, it is useful to provide some sort of loading feedback to the player. Returns the loaded percent from 0 to 100.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Get the Audio Group loading progress for "audiogroup_voices" and draw it as a text
+draw_text(x, y, "Now Loading "+string( ex_audio_group_get_load_progress(audiogroup_voices) )+"%");
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.8.0</small> <script>prettyPrint();</script>

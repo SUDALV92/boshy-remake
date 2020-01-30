@@ -1,0 +1,49 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_set_position</h1>
+<h2 class="subtitle">Sets the position of a sound in 3D space</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_set_position(soundName, x, y, z)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+		<tr>
+			<td>x</td>
+			<td>The x coordinate for the sound in 3D space</td>
+		</tr>
+		<tr>
+			<td>y</td>
+			<td>The y coordinate for the sound in 3D space</td>
+		</tr>
+		<tr>
+			<td>z</td>
+			<td>The z coordinate for the sound in 3D space</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Sets the position of a sound in 3D space.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the position for sound "fx_waterfall"
+ex_audio_set_position("fx_waterfall", 32, 32, 0);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.0</small> <script>prettyPrint();</script>

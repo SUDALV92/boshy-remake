@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_class_add_sound</h1>
+<h2 class="subtitle">Removes a sound from an audio class</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_class_remove_sound(soundName, audioClassName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+		<tr>
+			<td>audioClassName</td>
+			<td>The audio class name</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Removes a sound from an audio class.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Remove sound "fx_jump" from audio class "sound_effects"
+ex_audio_class_remove_sound("fx_jump", "sound_effects");
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.8.0</small> <script>prettyPrint();</script>

@@ -1,0 +1,28 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">Welcome</h1>
+
+<p class="description">The new audio functionality of GameMaker Studio 1.2 provided some great audio features, however left a lot to be desired, thus this extension was born.<br />exAudio is an abstraction layer for the audio_* functions of GameMaker Studio, plus it contains some additional features,</p>
+
+<h3 class="section">Getters &amp; Setters</h3>
+ 
+<p>Getters are not available in GameMaker Studio, so any sound attributes need to be monitored manually. exAudio keeps track of such data. Getters include position, velocity, falloff, volume, pitch and more. Both for sounds and the listener.</p>
+ 
+<h3 class="section">Audio Classes</h3>
+ 
+<p>You can create classes and add sounds to them in order to manipulate them all together at the same time. Sounds can belong to multiple classes.</p>
+ 
+<h3 class="section">Fade Volume &amp; Pitch</h3>
+ 
+<p>The function audio_sound_pitch() of GameMaker Studio does not support built-in fade in/out. exAudio contains functions that will remedy the issue. Fading for both volume &amp; pitch is also done by using steps instead of milliseconds for better sync with alarms and timelines.</p>
+ 
+<h3 class="section">Suspend Audio</h3>
+ 
+<p>You can Suspend all the sounds when e.g. the game loses focus. GameMaker Studio has a audio_pause_all() function but it's not of really good use in our case, as the developer might have paused some sounds intentionally so audio_resume_all() will resume <em>ALL</em> the sounds, even the ones we don't want to. ex_audio_suspend_all() and ex_audio_restore_all() intelligently checks if the sounds are paused intentionally and leaves those alone.</p>
+ 
+<h3 class="section">Unique Sounds</h3>
+ 
+<p>Groups can be used to store a series of sounds which can be played later on using the function ex_audio_class_play_unique(). That will choose a random sound from the class to play but the next time it will not play the same sound again. This functionality works best if you have lots of sounds in the particular class (e.g. around 10 or more) and reduces repetition of sound effects plus provides a better immersion especially for games that demand realism.</p>
+
+<h3 class="section">Easing</h3>
+ 
+<p>Fading in/out the volume or pitch of the sound can have easing applied to it, so it fades much smoother or with e.g. an "elastic" effect.</p>

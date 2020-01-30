@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_set_pitch_all</h1>
+<h2 class="subtitle">Sets the pitch of all sounds</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_set_pitch_all(value, fadeTime, easing)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>value</td>
+			<td>The target value, 0 to 5</td>
+		</tr>
+		<tr>
+			<td>fadeTime (optional)</td>
+			<td>Time to fade the value in steps, 0 for instant change</td>
+		</tr>
+		<tr>
+			<td>easing (optional)</td>
+			<td>The easing algorithm to use</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Sets the pitch of all sounds. Value is the target pitch from 0 = very slow to 5 = very fast. Note that values close to 0 or 5 might be a bit excessive. fadeTime can be a value (measured in steps) to smoothly fade the pitch to the target value, set it to 0 for instantaneous pitch change.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the pitch of all sounds to 1.4
+ex_audio_set_pitch_all(1.4);
+
+//Fade the pitch of all sounds to 2
+ex_audio_set_pitch_all(2, 50);
+
+//Fade the pitch of all sounds to 2 with easing
+ex_audio_set_pitch_all(2, 90, ease_out_quad);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.0</small> <script>prettyPrint();</script>

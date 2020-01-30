@@ -1,0 +1,44 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_class_play</h1>
+<h2 class="subtitle">Plays all the sounds in an audio class</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_class_play(audioClassName, loop)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>audioClassName</td>
+			<td>The audio class name</td>
+		</tr>
+		<tr>
+			<td>loop (optional)</td>
+			<td>Whether the sounds will loop. true = loop, false = play once</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Plays all the sounds in an audio class. The loop argument determines whether the sounds will loop. true = loop, false = play once.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Play all the sounds in the audio class "sound_effects" once
+ex_audio_class_play("sound_effects", false);
+
+//Play all the sounds "sound_effects" looping
+ex_audio_class_play("sound_effects", true);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.4</small> <script>prettyPrint();</script>

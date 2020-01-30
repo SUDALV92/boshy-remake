@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_exists</h1>
+<h2 class="subtitle">Returns if sound exists</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_exists(soundName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> if sound exists</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Returns if the specified sound exists in the exAudio sound database and is currently loaded and ready to use with the exAudio system.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//If sound "fx_jump" exists and is loaded, play it
+if (ex_audio_exists("fx_jump")) {
+	ex_audio_play("fx_jump", false);
+}
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.0</small> <script>prettyPrint();</script>

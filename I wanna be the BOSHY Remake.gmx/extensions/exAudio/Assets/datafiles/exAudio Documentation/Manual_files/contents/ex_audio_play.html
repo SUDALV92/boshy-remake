@@ -1,0 +1,44 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_play</h1>
+<h2 class="subtitle">Plays a sound</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_play(soundName, loop)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+		<tr>
+			<td>loop (optional)</td>
+			<td>Whether the sound will loop. true = loop, false = play once</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the channelHandle or -1 if using the legacy audio system</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Plays a sound. The loop argument determines whether the sound will loop. true = loop, false = play once. The function returns the channelHandle of the sound playing (Added in exAudio 0.6.2), if the legacy audio system is used, it will report -1 instead.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Play the sound "fx_jump" once
+ex_audio_play("fx_jump");
+
+//Play the sound "track_stage1" looping
+ex_audio_play("track_stage1", true);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.0</small> <script>prettyPrint();</script>

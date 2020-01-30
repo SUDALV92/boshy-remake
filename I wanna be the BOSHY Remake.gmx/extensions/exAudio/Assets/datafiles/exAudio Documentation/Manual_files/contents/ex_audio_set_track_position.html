@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_set_track_position</h1>
+<h2 class="subtitle">Sets the current track position of a sound</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_set_track_position(soundName, position)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+		<tr>
+			<td>position</td>
+			<td>The track position, in seconds</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Sets the track position of a sound in seconds, e.g. 35.12</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the track position for sound "track_stage1" to 2 seconds
+ex_audio_set_track_position("track_stage1", 2);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.2</small> <script>prettyPrint();</script>

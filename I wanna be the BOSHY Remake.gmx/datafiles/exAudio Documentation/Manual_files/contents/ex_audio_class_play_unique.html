@@ -1,0 +1,48 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_class_play_unique</h1>
+<h2 class="subtitle">Chooses and plays a random unique sound from an audio class</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_class_play_unique(audioClassName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>audioClassName</td>
+			<td>The audio class name</td>
+		</tr>
+		<tr>
+			<td>pitchMin</td>
+			<td>The minimum random pitch value, 0 to 5</td>
+		</tr>
+		<tr>
+			<td>pitchMax</td>
+			<td>The maximum random pitch value, 0 to 5</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Chooses and plays a random unique sound from an audio class. The sound will be chosen randomly but in a unique manner that reduces repetitions. The function works exceptionally if the class contains a lot of sounds, preferably around 10+. Due to the nature of the function designed mainly for sound effects, there is no option to loop. Optional arguments pitchMin and pitchMax also apply a random pitch shift for more entropy.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Choose and play a random unique sound from audio class "fx_player_jumps"
+ex_audio_class_play_unique("fx_player_jumps");
+
+//Choose and play a random unique sound from audio class "fx_player_jumps" with a pitch randomized between 0.8 and 1.3
+ex_audio_class_play_unique_ext("fx_player_jumps", 0.8, 1.3);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.4</small> <script>prettyPrint();</script>

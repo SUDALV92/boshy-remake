@@ -1,0 +1,37 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_get_track_position</h1>
+<h2 class="subtitle">Gets the current track position of a sound</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_get_track_position(channelHandle)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>channelHandle</td>
+			<td>The sound channel handle</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the track duration in seconds</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Gets the track position of a sound in seconds, e.g. 35.12. channelHandle is the channel index returned from ex_audio_play() function.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Get the track position for the specified channel and store it in variable _value
+_value = ex_audio_get_track_position(_channel);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.2</small> <script>prettyPrint();</script>

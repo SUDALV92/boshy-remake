@@ -1,0 +1,50 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_set_falloff</h1>
+<h2 class="subtitle">Sets the falloff distance of a sound in 3D space</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_set_falloff(soundName, refDistance, maxDistance, factor)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>The sound name</td>
+		</tr>
+		<tr>
+			<td>refDistance</td>
+			<td>The falloff reference relative to the listener (clamp)</td>
+		</tr>
+		<tr>
+			<td>maxDistance</td>
+			<td>The maximum falloff distance relative to the listener</td>
+		</tr>
+		<tr>
+			<td>factor</td>
+			<td>The falloff factor (default 1)</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Sets the falloff of a sound in 3D space. With this function you can set the fall-off distance for the sound. This is the distance from the listener the sound has to be before the sound will have "fallen off" to a volume of 0. The default value for this is 100, but beware of setting this to any value lower than 1 as that will make the sound played inaudible to the listener, however any other value will cause the sound to fade away the further that the emitter is from the listener. <br />
+How the sound itself is heard will depend on the falloff reference (which is the distance under which the volume for the source would normally drop by half) and the roll off factor (which affects the sound past the falloff reference distance only). The default factor is normally 1, and the effect of the different falloff values will depend on the model chosen.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the falloff for sound "fx_waterfall" to 300 pixels distance, starting from 100 pixels distance
+ex_audio_set_falloff("fx_waterfall", 100, 300, 1);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.0</small> <script>prettyPrint();</script>

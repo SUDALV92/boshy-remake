@@ -1,0 +1,42 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_class_exists</h1>
+<h2 class="subtitle">Checks whether an audio class exists</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_class_exists(audioClassName)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>audioClassName</td>
+			<td>The class name</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> true if audio class exists, false if not</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Checks whether an audio class exists.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Check whether "sound_effects" audio class exists, otherwise create it and add the sound
+if (ex_audio_class_exists("sound_effects")) {
+    ex_audio_class_add_sound("fx_jump", "sound_effects");
+} else {
+    ex_audio_class_create("sound_effects");
+    ex_audio_class_add_sound("fx_jump", "sound_effects");
+}
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.6.4</small> <script>prettyPrint();</script>

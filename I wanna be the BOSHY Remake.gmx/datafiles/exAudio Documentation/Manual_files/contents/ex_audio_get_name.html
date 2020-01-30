@@ -1,0 +1,42 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_get_name</h1>
+<h2 class="subtitle">Gets the name of a sound</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_get_name(index)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>index</td>
+			<td>The index on the exAudio sounds database</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the sound name as a string</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Returns the name of a sound in the exAudio sound database by its position. Naturally there is not much use for this since exAudio already takes care of storage and indexes, but may come in handy for more low-level operations.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Retrieve and draw all the registered sounds
+var _offset_y = 24;
+
+for (var _i=0; _i &lt; ex_audio_count(); _i++ ) {
+    draw_text(window_get_width()-132, y+_offset_y, ex_audio_get_name(_i));
+    _offset_y += 24;
+}
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.8.0</small> <script>prettyPrint();</script>

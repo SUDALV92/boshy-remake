@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en-us" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>exAudio Documentation</title>
+		<link rel="shortcut icon" href="Manual_files/images/favicon.ico" />
+		<link rel="stylesheet" href="Manual_files/stylesheets/monokai.css" />
+		<link rel="stylesheet" href="Manual_files/stylesheets/base.css" />
+		<link rel="stylesheet" href="Manual_files/stylesheets/main.css" />
+		<script src="Manual_files/javascripts/jquery.js"></script>
+		<script src="Manual_files/javascripts/easing.js"></script>
+		<script src="Manual_files/javascripts/main.js"></script>
+		<script src="Manual_files/javascripts/prettify.js"></script>
+		<script src="Manual_files/javascripts/lang-basic.js"></script>
+		<script src="Manual_files/javascripts/main.js"></script>
+	</head>
+	<body>
+		<div class="layout-container">
+			<div class="layout-header"><img src="Manual_files/images/logo.png" class="logo" alt="Logo" /><div class="version"></div></div>
+			<div class="javascript-warning">This manual requires a browser/viewer with <strong>Javascript</strong> enabled. Please enable Javascript and reload this document.</div>
+			<div class="layout-content clear">
+				<div class="sidebar">
+					<div class="filter">
+						<input type="search" onkeyup="filter(this)" placeholder="Filter..." />
+					</div>
+					<div class="sidebar-inner">
+						<ul class="topics" style="display:block">
+							<li onclick="loadPage('ex_audio_welcome.html')"><span>Welcome</span></li>
+							<li onclick="loadPage('ex_audio_installation.html')">Installation</li>
+							<li onclick="loadPage('ex_audio_license.html')">License</li>
+							<span class="hr"></span>
+							<li onclick="loadPage('ex_audio_load.html')">ex_audio_load</li>
+							<li onclick="loadPage('ex_audio_unload.html')">ex_audio_unload</li>
+							<li onclick="loadPage('ex_audio_copy.html')">ex_audio_copy</li>
+							<li onclick="loadPage('ex_audio_rename.html')">ex_audio_rename</li>
+							<li onclick="loadPage('ex_audio_count.html')">ex_audio_count</li>
+							<li onclick="loadPage('ex_audio_has_class.html')">ex_audio_has_class</li>
+							<li onclick="loadPage('ex_audio_play.html')">ex_audio_play</li>
+							<li onclick="loadPage('ex_audio_stop.html')">ex_audio_stop</li>
+							<li onclick="loadPage('ex_audio_stop_all.html')">ex_audio_stop_all</li>
+							<li onclick="loadPage('ex_audio_pause.html')">ex_audio_pause</li>
+							<li onclick="loadPage('ex_audio_pause_all.html')">ex_audio_pause_all</li>
+							<li onclick="loadPage('ex_audio_resume.html')">ex_audio_resume</li>
+							<li onclick="loadPage('ex_audio_resume_all.html')">ex_audio_resume_all</li>
+							<li onclick="loadPage('ex_audio_set_volume.html')">ex_audio_set_volume</li>
+							<li onclick="loadPage('ex_audio_set_volume_all.html')">ex_audio_set_volume_all</li>
+							<li onclick="loadPage('ex_audio_set_pitch.html')">ex_audio_set_pitch</li>
+							<li onclick="loadPage('ex_audio_set_pitch_all.html')">ex_audio_set_pitch_all</li>
+							<li onclick="loadPage('ex_audio_set_position.html')">ex_audio_set_position</li>
+							<li onclick="loadPage('ex_audio_set_velocity.html')">ex_audio_set_velocity</li>
+							<li onclick="loadPage('ex_audio_set_falloff.html')">ex_audio_set_falloff</li>
+							<li onclick="loadPage('ex_audio_set_debug_mode.html')">ex_audio_set_debug_mode</li>
+							<li onclick="loadPage('ex_audio_get_volume.html')">ex_audio_get_volume</li>
+							<li onclick="loadPage('ex_audio_get_pitch.html')">ex_audio_get_pitch</li>
+							<li onclick="loadPage('ex_audio_get_position_x.html')">ex_audio_get_position_x</li>
+							<li onclick="loadPage('ex_audio_get_position_y.html')">ex_audio_get_position_y</li>
+							<li onclick="loadPage('ex_audio_get_position_z.html')">ex_audio_get_position_z</li>
+							<li onclick="loadPage('ex_audio_get_velocity_x.html')">ex_audio_get_velocity_x</li>
+							<li onclick="loadPage('ex_audio_get_velocity_y.html')">ex_audio_get_velocity_y</li>
+							<li onclick="loadPage('ex_audio_get_velocity_z.html')">ex_audio_get_velocity_z</li>
+							<li onclick="loadPage('ex_audio_get_falloff_ref.html')">ex_audio_get_falloff_ref</li>
+							<li onclick="loadPage('ex_audio_get_falloff_max.html')">ex_audio_get_falloff_max</li>
+							<li onclick="loadPage('ex_audio_get_falloff_factor.html')">ex_audio_get_falloff_factor</li>
+							<li onclick="loadPage('ex_audio_set_track_position.html')">ex_audio_set_track_position</li>
+							<li onclick="loadPage('ex_audio_get_track_position.html')">ex_audio_get_track_position</li>
+							<li onclick="loadPage('ex_audio_get_track_duration.html')">ex_audio_get_track_duration</li>
+							<li onclick="loadPage('ex_audio_get_priority.html')">ex_audio_get_priority</li>
+							<li onclick="loadPage('ex_audio_get_group.html')">ex_audio_get_group</li>
+							<li onclick="loadPage('ex_audio_get_index.html')">ex_audio_get_index</li>
+							<li onclick="loadPage('ex_audio_get_name.html')">ex_audio_get_name</li>
+							<li onclick="loadPage('ex_audio_get_emitter.html')">ex_audio_get_emitter</li>
+							<li onclick="loadPage('ex_audio_get_emitter.html')">ex_audio_get_channel</li>
+							<li onclick="loadPage('ex_audio_get_asset_index.html')">ex_audio_get_asset_index</li>
+							<li onclick="loadPage('ex_audio_get_asset_name.html')">ex_audio_get_asset_name</li>
+							<li onclick="loadPage('ex_audio_get_debug_mode.html')">ex_audio_get_debug_mode</li>
+							<li onclick="loadPage('ex_audio_is_loaded.html')">ex_audio_is_loaded</li>
+							<li onclick="loadPage('ex_audio_is_playing.html')">ex_audio_is_playing</li>
+							<li onclick="loadPage('ex_audio_is_paused.html')">ex_audio_is_paused</li>
+							<li onclick="loadPage('ex_audio_is_suspended.html')">ex_audio_is_suspended</li>
+							<li onclick="loadPage('ex_audio_is_looping.html')">ex_audio_is_looping</li>
+							<li onclick="loadPage('ex_audio_suspend_all.html')">ex_audio_suspend_all</li>
+							<li onclick="loadPage('ex_audio_restore_all.html')">ex_audio_restore_all</li>
+							<li onclick="loadPage('ex_audio_class_create.html')">ex_audio_class_create</li>
+							<li onclick="loadPage('ex_audio_class_add_sound.html')">ex_audio_class_add_sound</li>
+							<li onclick="loadPage('ex_audio_class_remove_sound.html')">ex_audio_class_remove_sound</li>
+							<li onclick="loadPage('ex_audio_class_destroy.html')">ex_audio_class_destroy</li>
+							<li onclick="loadPage('ex_audio_class_clear.html')">ex_audio_class_clear</li>
+							<li onclick="loadPage('ex_audio_class_exists.html')">ex_audio_class_exists</li>
+							<li onclick="loadPage('ex_audio_class_count.html')">ex_audio_class_count</li>
+							<li onclick="loadPage('ex_audio_class_count_sounds.html')">ex_audio_class_count_sounds</li>
+							<li onclick="loadPage('ex_audio_class_play.html')">ex_audio_class_play</li>
+							<li onclick="loadPage('ex_audio_class_play_unique.html')">ex_audio_class_play_unique</li>
+							<li onclick="loadPage('ex_audio_class_stop.html')">ex_audio_class_stop</li>
+							<li onclick="loadPage('ex_audio_class_pause.html')">ex_audio_class_pause</li>
+							<li onclick="loadPage('ex_audio_class_resume.html')">ex_audio_class_resume</li>
+							<li onclick="loadPage('ex_audio_class_set_volume.html')">ex_audio_class_set_volume</li>
+							<li onclick="loadPage('ex_audio_class_set_pitch.html')">ex_audio_class_set_pitch</li>
+							<li onclick="loadPage('ex_audio_class_set_position.html')">ex_audio_class_set_position</li>
+							<li onclick="loadPage('ex_audio_class_get_index.html')">ex_audio_class_get_index</li>
+							<li onclick="loadPage('ex_audio_class_get_name.html')">ex_audio_class_get_name</li>
+							<li onclick="loadPage('ex_audio_group_is_loaded.html')">ex_audio_group_is_loaded</li>
+							<li onclick="loadPage('ex_audio_group_get_load_progress.html')">ex_audio_group_get_load_progress</li>
+							<li onclick="loadPage('ex_audio_group_unload.html')">ex_audio_group_unload</li>
+							<li onclick="loadPage('ex_audio_listener_set_position.html')">ex_audio_listener_set_position</li>
+							<li onclick="loadPage('ex_audio_listener_set_orientation.html')">ex_audio_listener_set_orientation</li>
+							<li onclick="loadPage('ex_audio_listener_set_velocity.html')">ex_audio_listener_set_velocity</li>
+							<li onclick="loadPage('ex_audio_listener_get_position_x.html')">ex_audio_listener_get_position_x</li>
+							<li onclick="loadPage('ex_audio_listener_get_position_y.html')">ex_audio_listener_get_position_y</li>
+							<li onclick="loadPage('ex_audio_listener_get_position_z.html')">ex_audio_listener_get_position_z</li>
+							<li onclick="loadPage('ex_audio_listener_get_orientation_lookat_x.html')">ex_audio_listener_get_orientation_lookat_x</li>
+							<li onclick="loadPage('ex_audio_listener_get_orientation_lookat_y.html')">ex_audio_listener_get_orientation_lookat_y</li>
+							<li onclick="loadPage('ex_audio_listener_get_orientation_lookat_z.html')">ex_audio_listener_get_orientation_lookat_z</li>
+							<li onclick="loadPage('ex_audio_listener_get_orientation_up_x.html')">ex_audio_listener_get_orientation_up_x</li>
+							<li onclick="loadPage('ex_audio_listener_get_orientation_up_y.html')">ex_audio_listener_get_orientation_up_y</li>
+							<li onclick="loadPage('ex_audio_listener_get_orientation_up_z.html')">ex_audio_listener_get_orientation_up_z</li>
+							<li onclick="loadPage('ex_audio_listener_get_velocity_x.html')">ex_audio_listener_get_velocity_x</li>
+							<li onclick="loadPage('ex_audio_listener_get_velocity_y.html')">ex_audio_listener_get_velocity_y</li>
+							<li onclick="loadPage('ex_audio_listener_get_velocity_z.html')">ex_audio_listener_get_velocity_z</li>
+							<li onclick="loadPage('ex_audio_listener_reset_position.html')">ex_audio_listener_reset_position</li>
+							<li onclick="loadPage('ex_audio_set_channel_number.html')">ex_audio_set_channel_number</li>
+							<li onclick="loadPage('ex_audio_get_channel_number.html')">ex_audio_get_channel_number</li>
+							<li onclick="loadPage('ex_audio_set_falloff_model.html')">ex_audio_set_falloff_model</li>
+							<li onclick="loadPage('ex_audio_get_falloff_model.html')">ex_audio_get_falloff_model</li>
+						</ul>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="contents-inner">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

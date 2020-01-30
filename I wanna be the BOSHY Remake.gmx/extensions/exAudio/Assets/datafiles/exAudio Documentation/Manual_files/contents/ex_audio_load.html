@@ -1,0 +1,65 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script>
+
+<h1 class="title">ex_audio_load</h1>
+<h2 class="subtitle">Loads and assigns a Sound resource to be used with exAudio</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_load(soundName, soundResource, classes, priority, audioGroup)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>soundName</td>
+			<td>A unique sound name to use as identifier, string</td>
+		</tr>
+		<tr>
+			<td>soundResource</td>
+			<td>The sound resource or an external filename string</td>
+		</tr>
+		<tr>
+			<td>classes (optional)</td>
+			<td>A string with any existing audio classes to add the sound to, separated by space</td>
+		</tr>
+		<tr>
+			<td>priority (optional)</td>
+			<td>The sound priority, defaults to 0</td>
+		</tr>
+		<tr>
+			<td>audioGroup (optional)</td>
+			<td>The Audio Group that the sound belongs to, defaults to audiogroup_default</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> the ID of the added Sound in the exAudio sound database</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Before you can playback or manipulate your sound with exAudio, you first need to load the sound into the system. This function registers the appointed Sound resource for use with exAudio and you can later identify the sound by the unique name that you gave it.<br />The name must be unique, otherwise it will fail to register.<br />If you pass a string as sound resource argument, then exAudio will try to load an external OGG file and create a stream from that file.<br />You can also pass a string with any existing Audio Classes space-separated if you wish to also add the sound to Audio Classes upon loading, otherwise leave it blank or pass a blank string "".<br />If your sound belongs to another audiogroup, you will need to set the audioGroup argument as well. Doing so will also automatically load that Audio Group. Because Audio Group loading is async, you can check with ex_audio_is_loaded() or ex_audio_group_is_loaded() to see if the sound and the group it belongs to is loaded yet. If you do not use Audio Groups, there is no need to check for it.
+ex_audio_load() should be used before using any other ex_audio functions that explicitly manipulate or playback the sound.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Load the sound "snd_fx_jump" into exAudio with the unique name "fx_jump"
+ex_audio_load("fx_jump", snd_fx_jump);
+
+//Load the external OGG sound "sndFxJump.ogg" located in working_directory into exAudio with the unique name "fx_jump"
+ex_audio_load("fx_jump" "sndFxJump.ogg");
+
+//Load the sound "snd_fx_talk1" into exAudio with the unique name "p1_lets_go" and add it to Audio Classes "sound_effects" and "voices"
+ex_audio_load("p1_lets_go", snd_fx_talk1, "sound_effects voices");
+
+//Load the sound "snd_fx_talk1" into exAudio with the unique name "p1_lets_go" and add it to Audio Classes "sound_effects" and "voices" and also load its Audio Group
+ex_audio_load("p1_lets_go", snd_fx_talk1, "sound_effects voices", 0, audiogroup_voices);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.0</small> <script>prettyPrint();</script>

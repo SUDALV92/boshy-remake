@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_listener_set_velocity</h1>
+<h2 class="subtitle">Sets the velocity of the listener</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_listener_set_velocity(velocityX, velocityY, velocityZ)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>velocityX</td>
+			<td>The x velocity component of the listener (default 0)</td>
+		</tr>
+		<tr>
+			<td>velocityY</td>
+			<td>The y velocity component of the listener (default 0)</td>
+		</tr>
+		<tr>
+			<td>velocityZ</td>
+			<td>The z velocity component of the listener (default 0)</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">Sets the velocity for the listener. This function can be used to give the listener doppler effects and simulate audio motion based on the vector that is resolved from the given relative x, y and z positions. If the listener itself is not ever going to move, or the movement is not a constant motion, you would normally not need to set these values, but, for example, if you are making a scrolling game where the player has a constant bottom to top movement and the enemies a constant top to bottom movement, you would set the listener and sound velocities (for sounds you would use ex_audio_set_velocity) to the appropriate vectors to simulate the correct doppler effect as they move past the player instance.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Check if the player instance speed is over 0 and if it is use the appropriate absolute hspeed and vspeed components to set the listener velocity
+if (speed > 0) {
+    ex_audio_listener_set_velocity(abs(hspeed), abs(vspeed), 0);
+}
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.0</small> <script>prettyPrint();</script>

@@ -1,0 +1,37 @@
+
+<link rel="stylesheet" href="../stylesheets/iframe.css" /> <link rel="stylesheet" href="../stylesheets/monokai.css" /> <script src="../javascripts/prettify.js"></script> <script src="../javascripts/lang-basic.js"></script> <h1 class="title">ex_audio_set_channel_number</h1>
+<h2 class="subtitle">Set the number of available audio channels</h2>
+
+<h3 class="section">Syntax</h3>
+<code class="syntax">
+	ex_audio_set_channel_number(channelNumber)
+</code>
+
+<table class="arguments">
+	<thead>
+		<tr>
+			<th>Argument</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>channelNumber</td>
+			<td>Number of available audio channels (default is 128)</td>
+		</tr>
+	</tbody>
+</table>
+
+<small class="returns"><strong>Returns</strong> nothing</small>
+
+<h3 class="section">Description</h3>
+<p class="description">With this function you can set how many audio channels are available for playing audio in GameMaker Studio. What this basically means is that you give the number of simultaneous sounds that can be played at any one time, and if the number exceeds the amount, those sounds with a lower priority are stopped to free up a channel for the sounds with a higher priority. You can use this function to optimise your game for devices as the lower the number of channels for audio the better the performance, but bear in mind that this may also cause noticeable cut off of certain sounds if many are played at once.</p>
+
+<h3 class="section">Example</h3>
+<pre class="prettyprint lang-c">
+//Set the channel number to 32
+ex_audio_set_channel_number(32);
+</pre>
+
+<h3 class="section">Minimum Supported Version</h3>
+<small class="min-version">exAudio 0.5.2</small> <script>prettyPrint();</script>
